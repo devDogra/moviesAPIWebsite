@@ -1,0 +1,45 @@
+.movies-container {
+  display: flex; 
+  flex-wrap: wrap;
+  /* flex: 1 1 auto;  */
+}
+.movie-info-container {
+  background-color: gold;
+}
+.movie-poster-container {
+
+  display: flex;
+  flex-grow: 1;
+  align-items: start;
+  background-color: cyan;
+}
+.movie-poster {
+  width: 100%; 
+  
+  /* width: auto;  */
+}
+.movie {
+  width: 250px; 
+  /* padding: 10px;  */
+  border: 4px solid black; 
+
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.movie > * {
+  /* background-color: red; */
+  padding: .25em 1em; 
+}
+
+
+.movie-title-container {
+  background-color: red;
+  /* justify-self: start;  */
+  /* align-self: flex-end; */
+  flex-grow: 0;
+  /* margin-top: auto;  */
+}
