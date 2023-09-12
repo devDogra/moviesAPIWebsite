@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 import MovieCard from './components/Movie/Movie';
+import NavBar from './components/NavBar/NavBar';
 // import { debounce } from 'lodash';
 import debounce from './utils/debounce';
 // DEBOUNCE AND THROTTLING NEEDED
@@ -31,10 +32,9 @@ function App() {
 
 
     return (
-        <div className="app">
-            <h1>Movies</h1>
-
-            <div className="search">
+        <div className="text-center">
+            <NavBar />
+            <div className="search  bg-red-400">
                 <input
                     type="text"
                     placeholder='Search for movies'
