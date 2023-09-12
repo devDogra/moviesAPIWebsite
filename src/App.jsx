@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 import MovieCard from './components/Movie/Movie';
 import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header';
 // import { debounce } from 'lodash';
 import debounce from './utils/debounce';
 // DEBOUNCE AND THROTTLING NEEDED
@@ -33,16 +34,17 @@ function App() {
 
     return (
         <div className="text-center">
-            <NavBar />
+            {/* <NavBar /> */}
+            <Header />
             <div className="search  bg-red-400">
-                <input
+                {/* <input
                     type="text"
                     placeholder='Search for movies'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                 />
 
-                <button className="search-btn">Search</button>
+                <button className="search-btn">Search</button> */}
                 {
                     movieList?.length > 0 ?
                         (

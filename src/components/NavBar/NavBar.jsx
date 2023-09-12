@@ -3,7 +3,7 @@ import React from 'react'
 export default function NavBar() {
   return (
     <header>
-        <h1 className='bg'>MovieCliff</h1>
+        <h1 className= 'font-bold pt-4 pb-8 text-4xl'>MovieCliff</h1>
     </header>
   )
 }
