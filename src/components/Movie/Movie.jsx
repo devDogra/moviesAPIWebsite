@@ -10,9 +10,9 @@ export default function MovieCard({movie}) {
 
 
     return (
-        <div className="movie">
+        <div className="rounded-lg  bg-blue-700 p-1 ">
             <div className="movie-info-container">
-                <p>{movie.Year}</p>
+                <p className="text-white text-sm p-1 opacity-70 mb-1">{movie.Year}</p>
             </div>
 
             <div className="movie-poster-container">
@@ -25,9 +25,9 @@ export default function MovieCard({movie}) {
                 />
             </div>
 
-            <div className="movie-title-container">
-                <p>{movie.Type}</p>
-                <h2>{movie.Title}</h2>
+            <div className="movie-title-container p-2 text-white ">
+                <p className="uppercase font-mono opacity-70 text-sm">{movie.Type}</p>
+                <h2 className="font-bold text-lg drop-shadow-md">{movie.Title}</h2>
             </div>
         </div>
     );

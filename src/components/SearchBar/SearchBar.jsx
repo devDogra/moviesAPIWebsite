@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default function SearchBar() {
+export default function SearchBar({onSearchTermChange}) {
+
+const [searchTerm, setSearchTerm] = useState("");
+
+
   return (
     <div>
         <input
@@ -12,6 +16,7 @@ export default function SearchBar() {
             text-black opacity-30 outline-none py-2 px-8 rounded-full'
             // value={searchTerm}
             // onChange={e => setSearchTerm(e.target.value)}
+            onChange={e => onSearchTermChange(e.target.value)}
         />
 
         {/* <button className="search-btn">Search</button> */}
