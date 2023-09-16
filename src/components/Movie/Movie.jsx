@@ -14,7 +14,7 @@ export default function MovieCard({movie}) {
 
 
     return (
-        <div className="hover:shadow-sm hover:ring-blue-300 hover:ring-2  rounded-lg  bg-blue-700 text-center">
+        <div className="hover:shadow-sm hover:ring-blue-300 hover:ring-2  rounded-lg  bg-blue-700 text-center  max-w-sm">
             <div className="movie-info-container flex items-center p-1 justify-between">
                 <p className="text-white text-sm p-1 opacity-70 mb-1">{movie.Year}</p>
                 <div className="mx-2 hover:shadow-sm hover:shadow-sky-100 rounded-lg hover:cursor-pointer">

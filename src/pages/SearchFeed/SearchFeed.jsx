@@ -44,7 +44,9 @@ export default function SearchFeed() {
                 {
                     movieList?.length > 0 ? 
                         (
-                            <div className="flex flex-col items-center  p-4 gap-6 justify-center bg-purple-950">
+                            <div className="flex flex-col items-center  p-4 gap-6 justify-center bg-purple-950 sm:grid-cols-2 
+                            md:grid-cols-4 lg:grid-cols-6
+                            sm:grid ">
                                 {movieList.map(movie => {
                                         return <MovieCard key={movie.imdbID} movie={movie} />
                                 })}
