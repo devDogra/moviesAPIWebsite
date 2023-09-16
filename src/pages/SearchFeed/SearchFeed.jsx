@@ -40,7 +40,7 @@ export default function SearchFeed() {
                 setSearchTerm(prev => query);
             }} />
 
-            <div className=''>
+            <div className='w-screen'>
                 {
                     movieList?.length > 0 ? 
                         (
