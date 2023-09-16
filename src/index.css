@@ -7,3 +7,9 @@
     margin: 0; 
     padding: 0; 
 }
+body {
+    /* @apply bg-violet-950 bg-gradient-to-b bg-gradient-from-t to-blue-700 from-blue-400; */
+    /* @apply bg-gradient-to-br from-stone-600 to-stone-800; */
+    @apply bg-gradient-to-br from-slate-500 to-slate-700;
+
+}

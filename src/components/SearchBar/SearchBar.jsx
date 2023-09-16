@@ -6,14 +6,19 @@ const [searchTerm, setSearchTerm] = useState("");
 
 
   return (
-    <div>
+    <div className='h-min'>
         <input
             type="text"
-            placeholder='Search for movies'
-            className='bg-white focus:opacity-70 
+            placeholder='Search'
+            className='
+            bg-white 
+            text-sm 
+            focus:opacity-70 
             transition-all ease-in-out duration-200
-            text-sm focus:text-lg
-            text-black opacity-30 outline-none py-2 px-8 rounded-full'
+            w-min
+            p-4
+            text-black opacity-30 outline-none py-2 focus:px-10 rounded-full'
+            
             // value={searchTerm}
             // onChange={e => setSearchTerm(e.target.value)}
             onChange={e => onSearchTermChange(e.target.value)}
