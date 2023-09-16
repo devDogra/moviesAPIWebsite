@@ -16,6 +16,7 @@ export default function SearchFeed() {
         const url = `${API_URL}?apikey=${API_KEY}&s=${searchTerm}`
         const response = await fetch(url);
         const list = await response.json();
+        console.log(list.Search);
         setMovieList(list.Search);
     }
 
