@@ -12,9 +12,13 @@ export default function MovieCard({movie}) {
         return url; 
     }
 
+    function setAsFavourite(e) {
+        localStorage.setItem("favourite", JSON.stringify(movie));
+        alert("Set as favourite")
+    }
 
     return (
-        <div className="hover:shadow-sm hover:ring-gray-300 hover:ring-2  rounded-lg  bg-gray-800 text-center  max-w-sm shadow-lg shadow-stone-100/10">
+        <div className="hover:shadow-sm hover:ring-gray-300 hover:ring-2  rounded-lg  bg-gray-800 text-center  max-w-sm shadow-lg shadow-stone-100/10" onClick={setAsFavourite}>
             <div className="movie-info-container flex items-center p-1 justify-between">
                 <p className="text-white text-sm p-1 opacity-70 mb-1">{movie.Year}</p>
                 <div className="mx-2 hover:shadow-sm hover:shadow-sky-100 rounded-lg hover:cursor-pointer">
