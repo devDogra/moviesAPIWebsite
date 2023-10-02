@@ -7,7 +7,8 @@ import Smiley from "../../assets/smiley.png"
 function Profile() {
     const [name, setName] = useState("Dev");
     const [pic, setPic] = useState(Smiley);
-    const [fave, setFave] = useState({});
+    const [fave, setFave] = useState({
+    });
     // useEffect(() => {
     //     const randomUserUrl = "https://randomuser.me/api";
     //     fetch(randomUserUrl).then(response => response.json()).then(data => {
@@ -21,9 +22,11 @@ function Profile() {
 
     useEffect(() => {
         const faveStr = localStorage.getItem("favourite");
-        const fave = JSON.parse(faveStr);
-        console.log(fave); 
-        setFave(fave); 
+        if (faveStr) {
+            setFave(JSON.parse(faveStr));
+            console.log(fave); 
+        }
+        // setFave(fave); 
     }, [])
 
 
