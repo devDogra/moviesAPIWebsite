@@ -18,13 +18,17 @@ export default function MovieCard({movie}) {
     }
 
     return (
-        <div className="hover:shadow-sm hover:ring-gray-300 hover:ring-2  rounded-lg  bg-gray-800 text-center  max-w-sm shadow-lg shadow-stone-100/10" onClick={setAsFavourite}>
+        <div className="hover:shadow-sm hover:ring-gray-300 hover:ring-2  rounded-lg  bg-gray-800 text-center  max-w-sm shadow-lg shadow-stone-100/10" >
             <div className="movie-info-container flex items-center p-1 justify-between">
                 <p className="text-white text-sm p-1 opacity-70 mb-1">{movie.Year}</p>
-                <div className="mx-2 hover:shadow-sm hover:shadow-sky-100 rounded-lg hover:cursor-pointer">
-                    <a href={`${IMDB_URL}/${movie.imdbID}`}>
-                        <img className="w-8" src={IMDB_ICON} alt="imdb movie link icon" />
-                    </a>
+
+                <div className="flex">
+                    <div className="mx-2 hover:shadow-sm hover:shadow-sky-100 rounded-lg hover:cursor-pointer">
+                        <a href={`${IMDB_URL}/${movie.imdbID}`}>
+                            <img className="w-8" src={IMDB_ICON} alt="imdb movie link icon" />
+                        </a>
+                    </div>
+                    <button onClick={setAsFavourite} className="text-2xl hover:ring-3 ring-lime-200">⭐</button>
                 </div>
             </div>
 

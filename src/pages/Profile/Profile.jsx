@@ -2,21 +2,22 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import MovieCard from '../../components/Movie/Movie';
+import Smiley from "../../assets/smiley.png"
 
 function Profile() {
-    const [name, setName] = useState("Anonymous");
-    const [pic, setPic] = useState("");
+    const [name, setName] = useState("Dev");
+    const [pic, setPic] = useState(Smiley);
     const [fave, setFave] = useState({});
-    useEffect(() => {
-        const randomUserUrl = "https://randomuser.me/api";
-        fetch(randomUserUrl).then(response => response.json()).then(data => {
-            // const user = data.results[0]; 
-            console.log(data.results[0]); 
-            const user = data.results[0]; 
-            setName(user.name.first + " " + user.name.last);
-            setPic(user.picture.large); 
-        })
-    }, [])
+    // useEffect(() => {
+    //     const randomUserUrl = "https://randomuser.me/api";
+    //     fetch(randomUserUrl).then(response => response.json()).then(data => {
+    //         // const user = data.results[0]; 
+    //         console.log(data.results[0]); 
+    //         const user = data.results[0]; 
+    //         setName(user.name.first + " " + user.name.last);
+    //         setPic(user.picture.large); 
+    //     })
+    // }, [])
 
     useEffect(() => {
         const faveStr = localStorage.getItem("favourite");

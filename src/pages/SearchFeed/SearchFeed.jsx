@@ -14,6 +14,7 @@ export default function SearchFeed() {
 
     async function fetchAndRenderMovieList(searchTerm) {
         const url = `${API_URL}?apikey=${API_KEY}&s=${searchTerm}`
+        // const url = 'https://www.omdbapi.com?apikey=9f6a20f9&s=spiderman'
         const response = await fetch(url);
         const list = await response.json();
         console.log(list.Search);
